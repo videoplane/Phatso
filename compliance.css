@@ -1,0 +1,50 @@
+nav a[aria-current="page"] {
+  color: var(--cream);
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-nav {
+  width: 100%;
+  gap: 1rem;
+  font-size: 0.78rem;
+}
+
+.clickbank-disclaimer {
+  flex-basis: 100%;
+  max-width: 1180px;
+  margin: 0;
+  color: #9e8e79;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  font-weight: 650;
+}
+
+.support-summary,
+.policy-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.75fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(245, 234, 212, 0.12);
+}
+
+.policy-hero {
+  background:
+    linear-gradient(180deg, rgba(176, 24, 32, 0.16), rgba(0, 0, 0, 0)),
+    #080404;
+}
+
+@media (max-width: 980px) {
+  .support-summary,
+  .policy-section {
+    grid-template-columns: 1fr;
+  }
+}
