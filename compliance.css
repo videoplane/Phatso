@@ -42,9 +42,49 @@ nav a[aria-current="page"] {
     #080404;
 }
 
+.session-showcase {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.65fr) minmax(0, 1.35fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent),
+    rgba(0, 0, 0, 0.22);
+  border-block: 1px solid rgba(245, 234, 212, 0.12);
+}
+
+.session-copy p {
+  max-width: 620px;
+  color: #dfcbb0;
+  font-size: 1.04rem;
+  line-height: 1.68;
+  font-weight: 700;
+}
+
+.session-frame {
+  margin: 0;
+}
+
+.session-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(245, 234, 212, 0.16);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.38);
+}
+
+.session-frame figcaption {
+  margin-top: 0.75rem;
+  color: #9e8e79;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 @media (max-width: 980px) {
   .support-summary,
-  .policy-section {
+  .policy-section,
+  .session-showcase {
     grid-template-columns: 1fr;
   }
 }
