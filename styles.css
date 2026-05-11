@@ -90,7 +90,7 @@ nav a[aria-current="page"] {
   position: relative;
   min-height: 92vh;
   display: grid;
-  grid-template-columns: minmax(430px, 0.62fr) minmax(560px, 1.38fr);
+  grid-template-columns: minmax(500px, 0.65fr) minmax(560px, 1.35fr);
   align-items: center;
   gap: clamp(1rem, 3vw, 3rem);
   padding: 8rem clamp(1rem, 3vw, 3.25rem) 4rem;
@@ -194,7 +194,7 @@ h1 {
 }
 
 .hero h1 {
-  font-size: clamp(4.6rem, 9vw, 8.2rem);
+  font-size: clamp(4.6rem, 7vw, 7.4rem);
 }
 
 .tagline {
