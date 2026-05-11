@@ -90,9 +90,9 @@ nav a[aria-current="page"] {
   position: relative;
   min-height: 92vh;
   display: grid;
-  grid-template-columns: minmax(0, 0.86fr) minmax(420px, 0.95fr);
+  grid-template-columns: minmax(0, 0.68fr) minmax(520px, 1.25fr);
   align-items: center;
-  gap: clamp(2rem, 5vw, 5rem);
+  gap: clamp(1.5rem, 4vw, 4rem);
   padding: 8rem clamp(1rem, 5vw, 5rem) 4rem;
   overflow: hidden;
 }
@@ -216,7 +216,7 @@ h1 {
 }
 
 .hero-session {
-  width: min(100%, 720px);
+  width: min(100%, 980px);
   justify-self: end;
   margin: 0;
   padding: 0.55rem;
