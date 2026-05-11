@@ -71,10 +71,10 @@ a {
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(0.75rem, 2.5vw, 2rem);
+  gap: clamp(0.65rem, 1.8vw, 1.45rem);
   color: var(--muted);
   font-weight: 800;
-  font-size: 0.82rem;
+  font-size: 0.76rem;
   text-transform: uppercase;
 }
 
@@ -82,11 +82,15 @@ nav a:hover {
   color: var(--cream);
 }
 
+nav a[aria-current="page"] {
+  color: var(--cream);
+}
+
 .hero {
   position: relative;
   min-height: 92vh;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
+  grid-template-columns: minmax(0, 0.86fr) minmax(420px, 0.95fr);
   align-items: center;
   gap: clamp(2rem, 5vw, 5rem);
   padding: 8rem clamp(1rem, 5vw, 5rem) 4rem;
@@ -104,18 +108,52 @@ nav a:hover {
 
 .page-hero-content {
   position: relative;
-  max-width: 980px;
+  max-width: 900px;
 }
 
 .page-hero h1 {
-  max-width: 11ch;
-  font-size: clamp(4rem, 12vw, 9.5rem);
+  max-width: 12ch;
+  font-size: clamp(3rem, 8vw, 6.8rem);
+  line-height: 0.88;
 }
 
 .affiliate-hero {
   background:
     linear-gradient(180deg, rgba(176, 24, 32, 0.16), rgba(0, 0, 0, 0)),
     #080404;
+}
+
+.clickbank-page {
+  overflow: hidden;
+}
+
+.cb-hero {
+  position: relative;
+  min-height: 88vh;
+  display: grid;
+  align-items: center;
+  padding: 8rem clamp(1rem, 5vw, 5rem) 4rem;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(176, 24, 32, 0.24), rgba(0, 0, 0, 0.02)),
+    #080404;
+}
+
+.cb-hero-inner {
+  position: relative;
+  max-width: 1060px;
+}
+
+.cb-hero h1 {
+  max-width: 12ch;
+  font-size: clamp(3.1rem, 8.3vw, 7.2rem);
+  line-height: 0.9;
+}
+
+.cb-button {
+  min-height: 58px;
+  padding-inline: 1.45rem;
+  font-size: 0.9rem;
 }
 
 .hero-art {
@@ -134,7 +172,8 @@ nav a:hover {
 }
 
 .hero-content,
-.plugin-face {
+.plugin-face,
+.hero-session {
   position: relative;
 }
 
@@ -174,6 +213,32 @@ h1 {
   flex-wrap: wrap;
   gap: 0.9rem;
   margin-top: 2rem;
+}
+
+.hero-session {
+  width: min(100%, 720px);
+  justify-self: end;
+  margin: 0;
+  padding: 0.55rem;
+  border-radius: 8px;
+  border: 1px solid rgba(245, 234, 212, 0.2);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.44));
+  box-shadow: 0 30px 90px var(--shadow);
+}
+
+.hero-session img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.hero-session figcaption {
+  margin-top: 0.65rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 850;
+  text-align: center;
 }
 
 .button {
@@ -463,7 +528,8 @@ h2 {
 .copy-card h3 {
   margin: 0;
   color: var(--cream);
-  font-size: 1.35rem;
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  line-height: 1.05;
   font-weight: 1000;
 }
 
@@ -473,6 +539,181 @@ h2 {
   margin: 0;
   color: #d8c5aa;
   line-height: 1.55;
+}
+
+.section-copy,
+.support-copy p {
+  max-width: 780px;
+  margin: 1rem 0 0;
+  color: #dfcbb0;
+  line-height: 1.65;
+  font-size: 1.06rem;
+}
+
+.cb-split,
+.cb-commission,
+.cb-support {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.75fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+  background: rgba(0, 0, 0, 0.22);
+  border-block: 1px solid rgba(245, 234, 212, 0.12);
+}
+
+.cb-bullet-list {
+  list-style: none;
+  display: grid;
+  gap: 0.9rem;
+  margin: 0;
+  padding: 0;
+}
+
+.cb-bullet-list li,
+.step-list li {
+  position: relative;
+  padding: 0 0 0.9rem 1.25rem;
+  border-bottom: 1px solid rgba(245, 234, 212, 0.12);
+  color: #dfcbb0;
+  line-height: 1.55;
+  font-weight: 750;
+}
+
+.cb-bullet-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.cb-bullet-list.compact {
+  gap: 0.75rem;
+}
+
+.commission-card {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid rgba(245, 234, 212, 0.14);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent),
+    #120809;
+}
+
+.cb-plugin-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(245, 234, 212, 0.12);
+  border: 1px solid rgba(245, 234, 212, 0.12);
+}
+
+.cb-plugin-card {
+  min-height: 300px;
+  display: grid;
+  align-content: end;
+  gap: 0.85rem;
+  padding: 1rem;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), transparent),
+    var(--panel);
+}
+
+.plugin-placeholder {
+  min-height: 140px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(245, 234, 212, 0.18);
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.045) 0 1px, transparent 1px 8px),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.42));
+  color: var(--gold);
+  font-size: clamp(1rem, 2vw, 1.45rem);
+  font-weight: 1000;
+}
+
+.cb-plugin-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 1000;
+}
+
+.cb-plugin-card p {
+  margin: 0;
+  color: #d8c5aa;
+  line-height: 1.5;
+}
+
+.step-list {
+  counter-reset: steps;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+  padding: 1px;
+  background: rgba(245, 234, 212, 0.12);
+}
+
+.step-list li {
+  counter-increment: steps;
+  min-height: 180px;
+  padding: 4rem 1.25rem 1.25rem;
+  border: 0;
+  background: linear-gradient(180deg, #160909, #0b0505);
+}
+
+.step-list li::before {
+  content: counter(steps, decimal-leading-zero);
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  color: var(--gold);
+  font-size: 1.35rem;
+  font-weight: 1000;
+}
+
+.support-copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.support-copy p {
+  margin: 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(245, 234, 212, 0.12);
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(245, 234, 212, 0.12);
+  border: 1px solid rgba(245, 234, 212, 0.12);
+}
+
+.stat-card {
+  min-height: 170px;
+  display: grid;
+  align-content: end;
+  gap: 0.65rem;
+  padding: 1.25rem;
+  background: linear-gradient(180deg, #160909, #0b0505);
+}
+
+.stat-card span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.stat-card strong {
+  color: var(--gold);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1;
 }
 
 .commission-band,
@@ -598,6 +839,7 @@ blockquote {
 
 footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
   padding: 1.25rem clamp(1rem, 5vw, 5rem);
@@ -607,21 +849,69 @@ footer {
   font-weight: 800;
 }
 
+.site-footer {
+  align-items: flex-start;
+}
+
+.footer-nav {
+  width: 100%;
+  gap: 1rem;
+  font-size: 0.78rem;
+}
+
+.clickbank-disclaimer {
+  flex-basis: 100%;
+  max-width: 1180px;
+  margin: 0;
+  color: #9e8e79;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  font-weight: 650;
+}
+
+.support-summary,
+.policy-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.75fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(245, 234, 212, 0.12);
+}
+
+.policy-hero {
+  background:
+    linear-gradient(180deg, rgba(176, 24, 32, 0.16), rgba(0, 0, 0, 0)),
+    #080404;
+}
+
 @media (max-width: 980px) {
   .hero,
   .plain-answer,
   .intro,
+  .support-summary,
+  .policy-section,
+  .cb-split,
+  .cb-commission,
+  .cb-support,
   .commission-band,
   .rules-section,
   .proof {
     grid-template-columns: 1fr;
   }
 
-  .plugin-face {
+  .plugin-face,
+  .hero-session {
     justify-self: start;
   }
 
   .color-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cb-plugin-grid,
+  .stat-grid,
+  .step-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -644,11 +934,34 @@ footer {
   .site-header {
     position: static;
     align-items: flex-start;
+    flex-direction: column;
   }
 
   nav {
-    gap: 0.7rem;
-    font-size: 0.72rem;
+    width: 100%;
+    gap: 0.55rem 0.8rem;
+    font-size: 0.68rem;
+  }
+
+  .page-hero {
+    min-height: auto;
+    padding-top: 3.5rem;
+  }
+
+  .cb-hero {
+    min-height: auto;
+    padding-top: 3.5rem;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.9rem, 17vw, 4.7rem);
+    line-height: 0.92;
+  }
+
+  .cb-hero h1 {
+    max-width: 10ch;
+    font-size: clamp(2.8rem, 14vw, 4.5rem);
+    line-height: 0.94;
   }
 
   .hero {
@@ -671,6 +984,9 @@ footer {
 
   .strip,
   .color-grid,
+  .cb-plugin-grid,
+  .stat-grid,
+  .step-list,
   .partner-grid,
   .asset-grid,
   .copy-grid {
