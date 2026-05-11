@@ -90,10 +90,10 @@ nav a[aria-current="page"] {
   position: relative;
   min-height: 92vh;
   display: grid;
-  grid-template-columns: minmax(0, 0.68fr) minmax(520px, 1.25fr);
+  grid-template-columns: minmax(360px, 0.48fr) minmax(640px, 1.62fr);
   align-items: center;
-  gap: clamp(1.5rem, 4vw, 4rem);
-  padding: 8rem clamp(1rem, 5vw, 5rem) 4rem;
+  gap: clamp(1rem, 3vw, 3rem);
+  padding: 8rem clamp(1rem, 3vw, 3.25rem) 4rem;
   overflow: hidden;
 }
 
@@ -216,7 +216,7 @@ h1 {
 }
 
 .hero-session {
-  width: min(100%, 980px);
+  width: min(100%, 1120px);
   justify-self: end;
   margin: 0;
   padding: 0.55rem;
