@@ -498,6 +498,11 @@ h2 {
 .amber { background-color: #21150a; }
 .chrome { background-color: #111419; }
 .black { background-color: #080607; }
+.producer {
+  background:
+    linear-gradient(135deg, rgba(241, 58, 53, 0.22), rgba(255, 194, 51, 0.14)),
+    #120708;
+}
 
 .section-heading {
   max-width: 980px;
