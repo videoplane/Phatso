@@ -16,7 +16,7 @@ nav a[aria-current="page"] {
   font-size: 0.78rem;
 }
 
-.clickbank-disclaimer {
+.platform-note {
   flex-basis: 100%;
   max-width: 1180px;
   margin: 0;

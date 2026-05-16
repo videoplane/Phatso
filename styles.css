@@ -123,7 +123,7 @@ nav a[aria-current="page"] {
     #080404;
 }
 
-.clickbank-page {
+.partner-page {
   overflow: hidden;
 }
 
@@ -631,7 +631,7 @@ h2 {
     var(--panel);
 }
 
-.plugin-placeholder {
+.plugin-tile {
   min-height: 140px;
   display: grid;
   place-items: center;
@@ -906,7 +906,7 @@ footer {
   font-size: 0.78rem;
 }
 
-.clickbank-disclaimer {
+.platform-note {
   flex-basis: 100%;
   max-width: 1180px;
   margin: 0;

@@ -7,7 +7,7 @@ nav a[aria-current="page"] {
   color: var(--cream);
 }
 
-.clickbank-page {
+.partner-page {
   overflow: hidden;
 }
 
@@ -162,7 +162,7 @@ nav a[aria-current="page"] {
     var(--panel);
 }
 
-.plugin-placeholder {
+.plugin-tile {
   min-height: 140px;
   display: grid;
   place-items: center;
