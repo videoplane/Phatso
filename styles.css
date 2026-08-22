@@ -391,7 +391,7 @@ h1 {
 
 .strip {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   border-block: 1px solid rgba(245, 234, 212, 0.14);
   background: rgba(0, 0, 0, 0.28);
 }
@@ -400,10 +400,25 @@ h1 {
   min-height: 64px;
   display: grid;
   place-items: center;
+  gap: 0.2rem;
   color: var(--gold);
   font-size: 0.8rem;
   font-weight: 950;
   border-right: 1px solid rgba(245, 234, 212, 0.12);
+}
+
+.strip .new-product {
+  color: var(--cream);
+  background:
+    linear-gradient(180deg, rgba(241, 58, 53, 0.24), rgba(201, 168, 95, 0.10)),
+    rgba(12, 5, 5, 0.76);
+}
+
+.strip em {
+  color: var(--gold);
+  font-size: 0.62rem;
+  font-style: normal;
+  letter-spacing: 0;
 }
 
 .section {
@@ -498,6 +513,23 @@ h2 {
 .amber { background-color: #21150a; }
 .chrome { background-color: #111419; }
 .black { background-color: #080607; }
+.eq-new {
+  position: relative;
+  background:
+    linear-gradient(135deg, rgba(241, 58, 53, 0.24), rgba(201, 168, 95, 0.18)),
+    repeating-linear-gradient(90deg, rgba(245, 234, 212, 0.055) 0 1px, transparent 1px 8px),
+    #140708;
+}
+
+.eq-new span {
+  width: fit-content;
+  padding: 0.24rem 0.5rem;
+  border: 1px solid rgba(201, 168, 95, 0.58);
+  border-radius: 999px;
+  color: var(--cream);
+  background: rgba(241, 58, 53, 0.42);
+}
+
 .producer {
   background:
     linear-gradient(135deg, rgba(241, 58, 53, 0.22), rgba(255, 194, 51, 0.14)),
@@ -653,6 +685,18 @@ h2 {
   margin: 0;
   font-size: 1.25rem;
   font-weight: 1000;
+}
+
+.new-pill {
+  display: inline-grid;
+  place-items: center;
+  margin-left: 0.35rem;
+  padding: 0.18rem 0.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 168, 95, 0.55);
+  color: var(--gold);
+  font-size: 0.62rem;
+  vertical-align: middle;
 }
 
 .cb-plugin-card p {
